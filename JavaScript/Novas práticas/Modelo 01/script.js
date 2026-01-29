@@ -1,0 +1,1 @@
+alert ("Clique em Ok para continuar")

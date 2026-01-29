@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação Dom Melhorada</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f8ff;
+            text-align: center;
+        }
+
+        input, button {
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        #mensagem.visivel {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>✌️Olá, Digite seu nome abaixo: </h1>
+    <input type="text" id = "nomeInput" placeholder=" Seu nome aqui ">
+    <br>
+    <button id = "btnSaudar">Saudar</button>
+
+    <p id = "mensagem"></p>
+
+    <script>
+        const botao = document.getElementById("btnSaudar") ;
+        const inputNome = document.getElementById("nomeInput") ;
+        const mensagem = document.getElementById("mensagem") ;
+
+        //Verifica se já existe nome salvo
+        const nomeSalvo = localStorage.getItem("nomeUsuario") ;
+        if (nomeSalvo) {
+            mostrarMensagem(nomeSalvo) ;
+        }
+
+        botao.addEventListener("click", function () {
+            const nome = inputNome.value.trim(); 
+
+            if (nome === "") {
+                mensagem.innerText = "⚠️ Por favor, digite seu nome!" ;
+                mensagem.style.color = "red" ;
+                mensagem.classList.add("visivel") ;
+            
+            } else {
+                localStorage.setItem("nomeUsuario", nome) ; //Salva no navegador
+                mostrarMensagem(nome) ;
+            }
+        }) ;
+
+        function mostrarMensagem(nome) {
+            mensagem.innerText = `Olá, ${nome}! Seja Bem-Vinda ao Dom Mágico! ⭐💫` ;
+            mensagem.style.color = "green" ; 
+            mensagem.classList.add("visivel") ;
+
+        }
+    </script>
+</body>
+</html>

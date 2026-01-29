@@ -1,0 +1,71 @@
+O que é o Dom?
+DOM =Document Object Model
+conjunto de objetos dentro do computador
+
+àrvore DOM
+Raiz: window(janela):
+location
+document(parent: html)(chid: head-body)
+history
+
+5 métodos de acessos ao DOM
+marca (getElementsByTagName() - mais de um objeto
+ID getElementsByID()
+Nome getElementsByName()
+Classe getElementsByClassName()
+Seletor querySelector()
+querySelectorAll()
+
+*inner.text(pega somente o texto)
+*inner.html(pega com a formatação)
+toda div é representada por uma # e toda classe por um .
+
+🧩 Resumo: Como acessar elementos no DOM
+Método	Exemplo	Retorna	Quando usar
+getElementById()	document.getElementById("titulo")	1 elemento (único)	Quando o elemento tem um id único
+getElementsByClassName()	document.getElementsByClassName("btn")	Coleção de elementos	Quando há vários elementos com a mesma class
+getElementsByTagName()	document.getElementsByTagName("p")	Coleção de elementos	Para pegar todos os elementos de uma tag
+getElementsByName()	document.getElementsByName("email")	Coleção de elementos	Útil em formulários, com o atributo name
+querySelector()	document.querySelector(".titulo")	O primeiro que encontrar	Quando você quer um só elemento com seletor CSS
+querySelectorAll()	document.querySelectorAll("p.texto")	Lista com todos que combinam	Para pegar todos os que combinam com um seletor CSS
+
+🎯 Exemplos práticos:
+js
+Copiar
+Editar
+// Por ID
+const titulo = document.getElementById("meuTitulo");
+
+// Por classe
+const botoes = document.getElementsByClassName("botao");
+
+// Por tag
+const paragrafos = document.getElementsByTagName("p");
+
+// Por name
+const radios = document.getElementsByName("opcao");
+
+// Com querySelector (pega o primeiro que achar)
+const input = document.querySelector("input[type='text']");
+
+// Com querySelectorAll (pega todos os <li> da lista)
+const itens = document.querySelectorAll("ul li");
+
+Evento: tudo o que pode acontecer com a DIV
+com o movimento do mouse: 
+mouseenter
+mousemove
+mousedown
+mouseup
+click
+mouseout
+EventReferenc(site) https://developer.mozilla.org/en-US/docs/Web/Events
+
+
+o que é a DIV? ma <div> (abreviação de division) é uma tag HTML usada para agrupar elementos em um bloco. Ela não tem significado semântico específico, mas é extremamente útil para organizar o layout de uma página web e aplicar estilos com CSS ou comportamentos com JavaScript.
+Função: conjunto de códigos que vão ser executadas só quando o evento ocorrer
+agora serão disparadas somente quando o evento ocorrer dentro de um bloco dentro de chaves
+function ação(param){
+}
+para achar os erros é só ir ao console, você consegue verificar
+

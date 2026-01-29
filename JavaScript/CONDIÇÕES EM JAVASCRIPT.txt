@@ -1,0 +1,34 @@
+CONDIÇÕES EM JAVASCRIPT
+
+Sequências:
+Todos os códigos são sequenciais: 
+var = n = 3
+n += 2
+window.alert(n)
+
+As condições são como se fosse uma bifurcação com desvios condicionais
+o sistema segue um fluxo, acha uma bifurcação, encontra o que quer e segue novamente.
+
+if(condição) cria um boclo {
+
+true
+
+} else {
+
+false
+
+}
+
+Tipos de Condição
+Somente com um tipo de bloco (condição simples) se for verdadeira vai executar e se não for verdadeira não vai acontecer nada
+if (condição) {
+true
+}
+
+
+dois tipos(condição composta)
+if (condição) {
+true
+} else {
+false
+}

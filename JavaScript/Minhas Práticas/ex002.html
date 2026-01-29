@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saudação DOM</title>
+</head>
+<body>
+    <h1>Digite seu nome: </h1>
+    <input type="text" id = "nomeInput" placeholder = "Seu nome aqui">
+    <button id = "btnSaudar">Saudar</button>
+    <p id = "mensagem"></p>
+    <script>
+        const botao = document.getElementById("btnSaudar") ;
+        const inputNome = document.getElementById("nomeInput") ; 
+        const paragrafoMensagem = document.getElementById("mensagem")
+
+        botao.addEventListener("click", function() {
+            const nome = inputNome.value.trim() ;
+
+            if (nome === "") {
+                paragrafoMensagem.innerText = "Por favor, digite seu nome:" ;
+                paragrafoMensagem.style.color = "red" ;
+            } else {
+                paragrafoMensagem.innerText = `Olá, ${nome}! Seja bem-vinda ao DOM!`;
+                paragrafoMensagem.style.color = "green" ;
+            }
+
+        })
+    </script>
+</body>
+</html>
